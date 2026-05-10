@@ -9,3 +9,5 @@
 # Node 3 = Get Data 1 and Apply Logic
 
 # - > Subscriber and Publisher
+
+# Node 1 (publish) - > Topic (Data) <- (Subscribe) Node 2

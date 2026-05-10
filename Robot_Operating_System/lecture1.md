@@ -1,13 +1,45 @@
-# Node 1 = Individual Entity
+# ROS Communication Concepts
 
-# Topics = Pathway Data
+## 1. Node
 
-# Node 1 = Send Data
+A **Node** is an individual executable entity/process in ROS that performs a specific task.
 
-# Node 2 = Get Data 1
+### Examples
 
-# Node 3 = Get Data 1 and Apply Logic
+- Node 1 → Sends Data
+- Node 2 → Receives Data
+- Node 3 → Receives Data and Applies Logic
 
-# - > Subscriber and Publisher
+Each node works independently but communicates with other nodes.
 
-# Node 1 (publish) - > Topic (Data) <- (Subscribe) Node 2
+---
+
+# 2. Topics
+
+A **Topic** is a communication channel used to exchange data between nodes.
+
+- Topics carry pathway data/messages.
+- Multiple nodes can publish or subscribe to the same topic.
+
+### Example Topics
+
+- `/robot_position`
+- `/sensor_data`
+
+---
+
+# 3. Publisher and Subscriber
+
+## Publisher
+
+A publisher sends data to a topic.
+
+## Subscriber
+
+A subscriber receives data from a topic.
+
+### Communication Flow
+
+```text
+Node 1 (Publisher) ---> Topic ---> Node 2 (Subscriber)
+```
